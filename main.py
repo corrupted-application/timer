@@ -14,19 +14,23 @@ while True:
  cls()
  title("CorruptedApplication Timer")
  print("[yellow]Welcome to Corrupted Application Timer!\n")
- wait = Prompt.ask("[blue]Type when to ring (in seconds)")
+ while True:  
+     wait = Prompt.ask("[blue]Type when to ring (in seconds)")
+     if wait.isdigit():
+         wait = int(wait)
+         break
+     else:
+         print("[red]Please enter a valid number")
  cls()
  print("Idle. Will ring in " + str(wait) + " seconds.")
- time.sleep(int(wait))
+ time.sleep(wait)
  cls()
- print("Ring ring ring")
+ print("Ring ring ring🔔")
  toast('The timer is up!')
  time.sleep(3)
  quitting = Prompt.ask("[blue]Do you want to quit? (y/n)")
  if quitting == "y":
      break
-     cls()
-     exit()
  elif quitting == "n":
      cls()
 cls()
