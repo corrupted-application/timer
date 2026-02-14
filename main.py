@@ -7,8 +7,8 @@ from rich.prompt import Prompt
 def cls():
     os.system('cls')
 
-def title(title):
-    os.system('title ' + title)
+def title(window_title):
+    os.system('title ' + window_title)
 
 while True:
  cls()
